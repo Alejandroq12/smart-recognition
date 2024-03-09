@@ -46,7 +46,6 @@ class App extends Component {
         .then((response) => response.json())
         .then((data) => {
           if (data && data.id) {
-            // Assuming the data includes user id when token is valid
             this.loadUser(data);
             this.onRouteChange('home');
           }
