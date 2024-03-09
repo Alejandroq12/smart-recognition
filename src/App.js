@@ -32,8 +32,29 @@ class App extends Component {
   };
 
   componentDidMount() {
-    fetch('http://localhost:3003/').then((response) => response.json());
+    const token = localStorage.getItem('token');
+    if (token) {
+      fetch('http://localhost:3003/validate', {
+        method: 'get',
+        headers: {
+          'Content-type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.id) { // Assuming the data includes user id when token is valid
+          this.loadUser(data); // You would also modify loadUser as necessary to fit this data structure
+          this.onRouteChange('home');
+        }
+      })
+      .catch(err => {
+        console.error('Session validation error:', err);
+      });
+    }
   }
+  
+
 
   onRouteChange = (route) => {
     if (route === 'signout') {
