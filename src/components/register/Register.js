@@ -35,7 +35,7 @@ class Register extends React.Component {
       .then((response) => response.json())
       .then((data) => {
         // console.log(data)
-        if (data.user && data.token) { // Check if the response includes a user object and a token
+        if (data.user.id && data.token) { // Check if the response includes a user object and a token
           localStorage.setItem('token', data.token); // Store the token in local storage
           this.props.loadUser(data.user); // Update the app's user state with the received user object
           this.props.onRouteChange('home'); // Navigate to the home page
