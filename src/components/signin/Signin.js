@@ -26,11 +26,16 @@ class Signin extends React.Component {
       }),
     })
       .then((response) => response.json())
-      .then((user) => {
-        if (user.id) {
-          this.props.loadUser(user);
-          this.props.onRouteChange('home');
+      .then((data) => {
+        if (data.user && data.token) {
+          // Check if the response includes a user object and a token
+          localStorage.setItem('token', data.token); // Store the token in local storage
+          this.props.loadUser(data.user); // Update the app's user state with the received user object
+          this.props.onRouteChange('home'); // Navigate to the home page
         }
+      })
+      .catch((err) => {
+        console.error('Sign in error:', err);
       });
   };
 
@@ -52,7 +57,6 @@ class Signin extends React.Component {
                   name="email-address"
                   id="email-address"
                   onChange={this.onEmailChange}
-                  style={{ borderColor: 'purple' }}
                 />
               </div>
               <div className="mv3">
@@ -65,7 +69,6 @@ class Signin extends React.Component {
                   name="password"
                   id="password"
                   onChange={this.onPasswordChange}
-                  style={{ borderColor: 'purple' }}
                 />
               </div>
             </fieldset>
@@ -75,19 +78,12 @@ class Signin extends React.Component {
                 className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
                 type="submit"
                 value="Sign in"
-                style={{
-                  backgroundColor: 'purple',
-                  color: 'white',
-                  borderColor: 'black',
-                }}
               />
             </div>
             <div className="lh-copy mt3">
               <p
                 onClick={() => onRouteChange('register')}
-                href="#0"
                 className="f6 link dim black db pointer"
-                style={{ color: 'purple' }}
               >
                 Register
               </p>
