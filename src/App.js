@@ -5,19 +5,21 @@ import Register from './components/register/Register';
 import RunTracker from './components/runTracker/RunTracker';
 import './App.css';
 
+const initialState = {
+  route: 'signin',
+  isSignedIn: false,
+  user: {
+    id: '',
+    name: '',
+    email: '',
+    joined: '',
+  },
+};
+
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      route: 'signin',
-      isSignedIn: false,
-      user: {
-        id: '',
-        name: '',
-        email: '',
-        joined: '',
-      },
-    };
+    this.state = initialState;
   }
 
   loadUser = (data) => {
@@ -38,27 +40,26 @@ class App extends Component {
         method: 'get',
         headers: {
           'Content-type': 'application/json',
-          'Authorization': `Bearer ${token}`
+          Authorization: `Bearer ${token}`,
         },
       })
-      .then(response => response.json())
-      .then(data => {
-        if (data && data.id) { // Assuming the data includes user id when token is valid
-          this.loadUser(data); // You would also modify loadUser as necessary to fit this data structure
-          this.onRouteChange('home');
-        }
-      })
-      .catch(err => {
-        console.error('Session validation error:', err);
-      });
+        .then((response) => response.json())
+        .then((data) => {
+          if (data && data.id) {
+            // Assuming the data includes user id when token is valid
+            this.loadUser(data);
+            this.onRouteChange('home');
+          }
+        })
+        .catch((err) => {
+          console.error('Session validation error:', err);
+        });
     }
   }
-  
-
 
   onRouteChange = (route) => {
     if (route === 'signout') {
-      this.setState({ isSignedIn: false });
+      this.setState(initialState);
     } else if (route === 'home') {
       this.setState({ isSignedIn: true });
     }
