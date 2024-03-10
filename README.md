@@ -3,13 +3,10 @@
 <a name="readme-top"></a>
 
 <div align="center">
-    <img src="./public/logo.png" alt="logo" width="750"  height="auto" />
-    <img src="./public/logo2.png" alt="logo" width="750"  height="auto" />
-    <img src="./public/logo3.png" alt="logo" width="750"  height="auto" />
+  <img src="logo-julio.png" alt="main-logo" width="500"  height="auto" /><br/>
   <br/>
   <h3><b>Runner Tracker Front-end</b></h3>
-
-</div>4
+</div>
 
 <!-- TABLE OF CONTENTS -->
 
@@ -43,6 +40,13 @@
 
 This full-stack application, developed using PostgreSQL, Node.js, React.js, Heroku, Tachyons, and JWT, enables users to log and monitor their running activities. Specifically, it allows for the tracking and storage of both the duration and distance covered during each run. Designed for runners seeking a comprehensive view of their training progress, the app provides an intuitive and user-friendly interface to input and review their activity metrics effectively.
 
+[Runner Tracker Back-end -- Source code](https://github.com/Alejandroq12/runner-tracker-backend)
+
+<div align="center">
+    <img src="./public/logo.png" alt="logo" width="500"  height="auto" />
+    <img src="./public/logo2.png" alt="logo" width="500"  height="auto" />
+    <img src="./public/logo3.png" alt="logo" width="500"  height="auto" />
+</div>
 
 ## 🛠 Built With <a name="built-with"></a>
 HTML,
@@ -121,8 +125,9 @@ In order to run this project you need:
 
 Clone this repository to your desired folder or download the Zip folder:
 
+Use the following command to clone this project:
 ```
-https://github.com/Alejandroq12/runner-tracker.git
+git clone https://github.com/Alejandroq12/runner-tracker.git
 
 ```
 
@@ -146,9 +151,11 @@ To run the project, follow these instructions:
 
 - You must use `npm run start:dev` command in terminal to run this at the localhost.
 
+- Make sure that you are also running the back-end [Runner Tracker Back-end -- Source code](https://github.com/Alejandroq12/runner-tracker-backend)
+- 
 ### Run tests
 
-To run tests, run the following command:
+Tests are noy ready but you may run linters to check certain errors:
 
 - Track CSS linter errors run:
 ```
