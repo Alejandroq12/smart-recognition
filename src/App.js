@@ -36,7 +36,7 @@ class App extends Component {
   componentDidMount() {
     const token = localStorage.getItem('token');
     if (token) {
-      fetch('http://localhost:3003/validate', {
+      fetch('https://afternoon-dawn-26126-1d1d6e776adf.herokuapp.com/validate', {
         method: 'get',
         headers: {
           'Content-type': 'application/json',

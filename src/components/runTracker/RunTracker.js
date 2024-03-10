@@ -11,7 +11,7 @@ function RunTracker({ userId }) {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:3003/run-data/${userId}`)
+    fetch(`https://afternoon-dawn-26126-1d1d6e776adf.herokuapp.com/run-data/${userId}`)
       .then(response => response.json())
       .then(data => {
         setLoading(false);
@@ -30,7 +30,7 @@ function RunTracker({ userId }) {
   }, [userId]);
 
   const handleAddRun = () => {
-    fetch('http://localhost:3003/add-run', {
+    fetch('https://afternoon-dawn-26126-1d1d6e776adf.herokuapp.com/add-run', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
