@@ -1,4 +1,4 @@
-# Runner Tracker
+# Runner Tracker Front-end
 
 <a name="readme-top"></a>
 
@@ -7,7 +7,7 @@
     <img src="./public/logo2.png" alt="logo" width="750"  height="auto" />
     <img src="./public/logo3.png" alt="logo" width="750"  height="auto" />
   <br/>
-  <h3><b>Runner Tracker</b></h3>
+  <h3><b>Runner Tracker Front-end</b></h3>
 
 </div>4
 
@@ -15,9 +15,9 @@
 
 # 📗 Table of Contents
 
-- [Runner Tracker](#runner-tracker)
+- [Runner Tracker Front-end](#runner-tracker-front-end)
 - [📗 Table of Contents](#-table-of-contents)
-- [Runner Tracker ](#runner-tracker-)
+- [Runner Tracker Front-end ](#runner-tracker-front-end-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Feature ](#key-feature-)
@@ -39,7 +39,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# Runner Tracker <a name="about-project"></a>
+# Runner Tracker Front-end <a name="about-project"></a>
 
 This full-stack application, developed using PostgreSQL, Node.js, React.js, Heroku, Tachyons, and JWT, enables users to log and monitor their running activities. Specifically, it allows for the tracking and storage of both the duration and distance covered during each run. Designed for runners seeking a comprehensive view of their training progress, the app provides an intuitive and user-friendly interface to input and review their activity metrics effectively.
 
