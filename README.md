@@ -41,7 +41,7 @@
 
 # Runner Tracker <a name="about-project"></a>
 
-This full-stack application will be able to store the time and length of a runner activity.
+This full-stack application, developed using PostgreSQL, Node.js, React.js, Heroku, Tachyons, and JWT, enables users to log and monitor their running activities. Specifically, it allows for the tracking and storage of both the duration and distance covered during each run. Designed for runners seeking a comprehensive view of their training progress, the app provides an intuitive and user-friendly interface to input and review their activity metrics effectively.
 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -63,7 +63,7 @@ React.js
 </details>
 
 <details>
-  <summary>Backend</summary>
+  <summary>Back-end</summary>
   <ul>
     <li><a href="https://nodejs.org/en">Node.js</a></li>
     <li><a href="https://expressjs.com/">Express.js</a></li>
@@ -88,7 +88,8 @@ React.js
 
 ### Key Feature <a name="key-features"></a>
 
-- **Keep data stored in a database.**
+- **It tracks training progress.**
+- **It shows progress with a graph to let the user visually see improvements.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -96,8 +97,7 @@ React.js
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-It will be available soon!
-<!-- - [Live Demo Link](https://curious-raindrop-ebe2c8.netlify.app/) -->
+[Live Demo Link](https://running-track-acf8bf94dcd3.herokuapp.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,7 +143,8 @@ npm install
 To run the project, follow these instructions:
 
 - After Cloning this repo to your local machine.
-- You must use `npm start` command in terminal to run this at the localhost.
+
+- You must use `npm run start:dev` command in terminal to run this at the localhost.
 
 ### Run tests
 
@@ -160,9 +161,9 @@ npx eslint "**/*.{js,jsx}"
 
 ### Deployment <a name="deployment"></a>
 
-You can deploy this project using: Netlify, Render, or GitHub Pages,
-- I will use Netlify to deploy my website.
-- For more information about deployment on Netlify see "[Netlify](https://www.netlify.com/)".
+You can deploy this project using: Netlify, Render, Heroku or GitHub Pages,
+- I am using Heroku to deploy it.
+- For more information about deployment on Heroku see "[Heroku](https://www.heroku.com/what)".
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -182,8 +183,9 @@ You can deploy this project using: Netlify, Render, or GitHub Pages,
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **I will add the backend.**
-- [ ] **I will fetch data from API.**
+- [ ] **I will improve security.**
+- [ ] **I will improve performance.**
+- [ ] **I will reuse some React.js components to avoid repetition.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -201,7 +203,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project give me a star ⭐️
+If you like this project give me a star ⭐️.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -219,7 +221,7 @@ I want to thank all my colleagues that share knowledge with and inspired to to i
 
 - **What did you learned?**
 
-  - I learned how to use Tachyons, how to set up an API and how to build a full stack web application.
+  - Through developing this full-stack application, I gained hands-on experience in integrating PostgreSQL, Node.js, React.js, and JWT for secure and effective data handling and user authentication. I learned to deploy applications seamlessly using Heroku and employed Tachyons for rapid, responsive design. This project improved my skills in creating a tracking system, specifically created for runners, to monitor the duration and distance of their activities, enhancing their training progress with an intuitive and user-friendly interface.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
